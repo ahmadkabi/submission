@@ -37,7 +37,6 @@ void main() {
     posterPath: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
     releaseDate: '2002-05-01',
     title: 'Spider-Man',
-    video: false,
     voteAverage: 7.2,
     voteCount: 13507,
   );

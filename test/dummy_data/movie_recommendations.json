@@ -11,14 +11,13 @@
       ],
       "id": 1,
       "media_type": "movie",
-      "title": "Title",
+      "name": "Title",
       "original_language": "en",
-      "original_title": "Original Title",
+      "original_name": "Original Title",
       "overview": "Overview",
       "popularity": 1.0,
       "poster_path": "/path.jpg",
       "release_date": "2020-05-05",
-      "video": false,
       "vote_average": 1.0,
       "vote_count": 1
     }

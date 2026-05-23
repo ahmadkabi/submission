@@ -8,13 +8,12 @@ void main() {
     backdropPath: 'backdropPath',
     genreIds: [1, 2, 3],
     id: 1,
-    originalTitle: 'originalTitle',
+    originalName: 'originalTitle',
     overview: 'overview',
     popularity: 1,
     posterPath: 'posterPath',
     releaseDate: 'releaseDate',
-    title: 'title',
-    video: false,
+    name: 'title',
     voteAverage: 1,
     voteCount: 1,
   );
@@ -30,7 +29,6 @@ void main() {
     posterPath: 'posterPath',
     releaseDate: 'releaseDate',
     title: 'title',
-    video: false,
     voteAverage: 1,
     voteCount: 1,
   );

@@ -10,9 +10,7 @@ class MovieDetail extends Equatable {
     required this.originalTitle,
     required this.overview,
     required this.posterPath,
-    required this.releaseDate,
-    required this.runtime,
-    required this.title,
+    required this.name,
     required this.voteAverage,
     required this.voteCount,
   });
@@ -24,9 +22,7 @@ class MovieDetail extends Equatable {
   final String originalTitle;
   final String overview;
   final String posterPath;
-  final String releaseDate;
-  final int runtime;
-  final String title;
+  final String name;
   final double voteAverage;
   final int voteCount;
 
@@ -39,8 +35,7 @@ class MovieDetail extends Equatable {
         originalTitle,
         overview,
         posterPath,
-        releaseDate,
-        title,
+        name,
         voteAverage,
         voteCount,
       ];

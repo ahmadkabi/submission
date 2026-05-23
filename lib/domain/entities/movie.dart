@@ -12,7 +12,6 @@ class Movie extends Equatable {
     required this.posterPath,
     required this.releaseDate,
     required this.title,
-    required this.video,
     required this.voteAverage,
     required this.voteCount,
   });
@@ -34,7 +33,6 @@ class Movie extends Equatable {
   String? posterPath;
   String? releaseDate;
   String? title;
-  bool? video;
   double? voteAverage;
   int? voteCount;
 
@@ -50,7 +48,6 @@ class Movie extends Equatable {
         posterPath,
         releaseDate,
         title,
-        video,
         voteAverage,
         voteCount,
       ];

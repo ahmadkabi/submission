@@ -45,7 +45,6 @@ void main() {
     posterPath: 'posterPath',
     releaseDate: 'releaseDate',
     title: 'title',
-    video: false,
     voteAverage: 1,
     voteCount: 1,
   );

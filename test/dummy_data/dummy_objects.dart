@@ -15,7 +15,6 @@ final testMovie = Movie(
   posterPath: '/rweIrveL43TaxUN0akQEaAXL6x0.jpg',
   releaseDate: '2002-05-01',
   title: 'Spider-Man',
-  video: false,
   voteAverage: 7.2,
   voteCount: 13507,
 );
@@ -30,9 +29,7 @@ final testMovieDetail = MovieDetail(
   originalTitle: 'originalTitle',
   overview: 'overview',
   posterPath: 'posterPath',
-  releaseDate: 'releaseDate',
-  runtime: 120,
-  title: 'title',
+  name: 'title',
   voteAverage: 1,
   voteCount: 1,
 );

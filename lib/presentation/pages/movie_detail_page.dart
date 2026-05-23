@@ -102,7 +102,7 @@ class DetailContent extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              movie.title,
+                              movie.name,
                               style: kHeading5,
                             ),
                             FilledButton(
@@ -155,9 +155,9 @@ class DetailContent extends StatelessWidget {
                             Text(
                               _showGenres(movie.genres),
                             ),
-                            Text(
-                              _showDuration(movie.runtime),
-                            ),
+                            // Text(
+                            //   _showDuration(movie.runtime),
+                            // ),
                             Row(
                               children: [
                                 RatingBarIndicator(
