@@ -17,7 +17,7 @@
   "id": 1,
   "imdb_id": "imdb1",
   "original_language": "en",
-  "original_name": "Original Title",
+  "original_name": "Original Name",
   "overview": "Overview",
   "popularity": 1.0,
   "poster_path": "/path.jpg",
@@ -57,7 +57,7 @@
   ],
   "status": "Status",
   "tagline": "Tagline",
-  "name": "Title",
+  "name": "Name",
   "vote_average": 1.0,
   "vote_count": 1
 }
