@@ -6,16 +6,16 @@ import '../../helpers/test_helper.mocks.dart';
 
 void main() {
   late GetWatchListStatus usecase;
-  late MockMovieRepository mockMovieRepository;
+  late MockTvRepository mockTvRepository;
 
   setUp(() {
-    mockMovieRepository = MockMovieRepository();
-    usecase = GetWatchListStatus(mockMovieRepository);
+    mockTvRepository = MockTvRepository();
+    usecase = GetWatchListStatus(mockTvRepository);
   });
 
   test('should get watchlist status from repository', () async {
     // arrange
-    when(mockMovieRepository.isAddedToWatchlist(1))
+    when(mockTvRepository.isAddedToWatchlist(1))
         .thenAnswer((_) async => true);
     // act
     final result = await usecase.execute(1);

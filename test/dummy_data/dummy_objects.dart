@@ -1,9 +1,9 @@
-import 'package:ditonton/data/models/movie_table.dart';
+import 'package:ditonton/data/models/tv_table.dart';
 import 'package:ditonton/domain/entities/genre.dart';
-import 'package:ditonton/domain/entities/movie.dart';
-import 'package:ditonton/domain/entities/movie_detail.dart';
+import 'package:ditonton/domain/entities/tv.dart';
+import 'package:ditonton/domain/entities/tv_detail.dart';
 
-final testMovie = Movie(
+final testTv = Tv(
   adult: false,
   backdropPath: '/muth4OYamXf41G2evdrLEg8d3om.jpg',
   genreIds: [14, 28],
@@ -19,9 +19,9 @@ final testMovie = Movie(
   voteCount: 13507,
 );
 
-final testMovieList = [testMovie];
+final testTvList = [testTv];
 
-final testMovieDetail = MovieDetail(
+final testTvDetail = TvDetail(
   adult: false,
   backdropPath: 'backdropPath',
   genres: [Genre(id: 1, name: 'Action')],
@@ -34,21 +34,21 @@ final testMovieDetail = MovieDetail(
   voteCount: 1,
 );
 
-final testWatchlistMovie = Movie.watchlist(
+final testWatchlistTv = Tv.watchlist(
   id: 1,
   title: 'title',
   posterPath: 'posterPath',
   overview: 'overview',
 );
 
-final testMovieTable = MovieTable(
+final testTvTable = TvTable(
   id: 1,
   title: 'title',
   posterPath: 'posterPath',
   overview: 'overview',
 );
 
-final testMovieMap = {
+final testTvMap = {
   'id': 1,
   'overview': 'overview',
   'posterPath': 'posterPath',
