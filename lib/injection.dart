@@ -13,6 +13,7 @@ import 'package:ditonton/domain/usecases/get_watchlist_status.dart';
 import 'package:ditonton/domain/usecases/remove_watchlist.dart';
 import 'package:ditonton/domain/usecases/save_watchlist.dart';
 import 'package:ditonton/domain/usecases/search_tvs.dart';
+import 'package:ditonton/presentation/provider/now_playing_tvs_notifier.dart';
 import 'package:ditonton/presentation/provider/tv_detail_notifier.dart';
 import 'package:ditonton/presentation/provider/tv_list_notifier.dart';
 import 'package:ditonton/presentation/provider/tv_search_notifier.dart';
@@ -45,6 +46,11 @@ void init() {
   locator.registerFactory(
     () => TvSearchNotifier(
       searchTvs: locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => NowPlayingTvsNotifier(
+      locator(),
     ),
   );
   locator.registerFactory(
