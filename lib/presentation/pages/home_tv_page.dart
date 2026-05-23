@@ -47,7 +47,7 @@ class _HomeTvPageState extends State<HomeTvPage> {
             ),
             ListTile(
               leading: Icon(Icons.tv),
-              title: Text('Tvs'),
+              title: Text('TV Series'),
               onTap: () {
                 Navigator.pop(context);
               },

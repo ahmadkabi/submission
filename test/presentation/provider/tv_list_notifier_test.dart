@@ -100,7 +100,7 @@ void main() {
     });
   });
 
-  group('popular tvs', () {
+  group('popular tv series', () {
     test('should change state to loading when usecase is called', () async {
       // arrange
       when(mockGetPopularTvs.execute())

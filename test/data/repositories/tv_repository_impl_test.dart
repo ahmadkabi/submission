@@ -147,7 +147,7 @@ void main() {
     });
   });
 
-  group('Top Rated Tvs', () {
+  group('Top Rated TV Series', () {
     test('should return tv list when call to data source is successful',
         () async {
       // arrange
