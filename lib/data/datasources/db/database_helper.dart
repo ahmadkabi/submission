@@ -4,13 +4,13 @@ import 'package:ditonton/data/models/movie_table.dart';
 import 'package:ditonton/data/models/tv_table.dart';
 import 'package:sqflite/sqflite.dart';
 
-class TvDatabaseHelper {
-  static TvDatabaseHelper? _databaseHelper;
-  TvDatabaseHelper._instance() {
+class DatabaseHelper {
+  static DatabaseHelper? _databaseHelper;
+  DatabaseHelper._instance() {
     _databaseHelper = this;
   }
 
-  factory TvDatabaseHelper() => _databaseHelper ?? TvDatabaseHelper._instance();
+  factory DatabaseHelper() => _databaseHelper ?? DatabaseHelper._instance();
 
   static Database? _database;
 
