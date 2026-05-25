@@ -8,7 +8,7 @@ import 'dart:typed_data' as _i19;
 
 import 'package:dartz/dartz.dart' as _i2;
 import 'package:ditonton/common/failure.dart' as _i8;
-import 'package:ditonton/data/datasources/db/database_helper.dart' as _i15;
+import 'package:ditonton/data/datasources/db/tv_database_helper.dart' as _i15;
 import 'package:ditonton/data/datasources/tv_local_data_source.dart' as _i13;
 import 'package:ditonton/data/datasources/tv_remote_data_source.dart'
     as _i11;
@@ -190,7 +190,7 @@ class MockTvLocalDataSource extends _i1.Mock
 /// A class which mocks [DatabaseHelper].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockDatabaseHelper extends _i1.Mock implements _i15.DatabaseHelper {
+class MockDatabaseHelper extends _i1.Mock implements _i15.TvDatabaseHelper {
   MockDatabaseHelper() {
     _i1.throwOnMissingStub(this);
   }
@@ -201,11 +201,11 @@ class MockDatabaseHelper extends _i1.Mock implements _i15.DatabaseHelper {
               returnValue: Future<_i16.Database?>.value())
           as _i7.Future<_i16.Database?>);
   @override
-  _i7.Future<int> insertWatchlist(_i14.TvTable? tv) =>
+  _i7.Future<int> insertWatchlistTv(_i14.TvTable? tv) =>
       (super.noSuchMethod(Invocation.method(#insertWatchlist, [tv]),
           returnValue: Future<int>.value(0)) as _i7.Future<int>);
   @override
-  _i7.Future<int> removeWatchlist(_i14.TvTable? tv) =>
+  _i7.Future<int> removeWatchlistTv(_i14.TvTable? tv) =>
       (super.noSuchMethod(Invocation.method(#removeWatchlist, [tv]),
           returnValue: Future<int>.value(0)) as _i7.Future<int>);
   @override
