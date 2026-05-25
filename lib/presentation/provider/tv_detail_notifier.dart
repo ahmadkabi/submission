@@ -3,9 +3,9 @@ import 'package:ditonton/domain/entities/tv_detail.dart';
 import 'package:ditonton/domain/usecases/get_tv_detail.dart';
 import 'package:ditonton/domain/usecases/get_tv_recommendations.dart';
 import 'package:ditonton/common/state_enum.dart';
-import 'package:ditonton/domain/usecases/get_watchlist_status.dart';
-import 'package:ditonton/domain/usecases/remove_watchlist.dart';
-import 'package:ditonton/domain/usecases/save_watchlist.dart';
+import 'package:ditonton/domain/usecases/get_watchlist_status_tv.dart';
+import 'package:ditonton/domain/usecases/remove_watchlist_tv.dart';
+import 'package:ditonton/domain/usecases/save_watchlist_tv.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -15,9 +15,9 @@ class TvDetailNotifier extends ChangeNotifier {
 
   final GetTvDetail getTvDetail;
   final GetTvRecommendations getTvRecommendations;
-  final GetWatchListStatus getWatchListStatus;
-  final SaveWatchlist saveWatchlist;
-  final RemoveWatchlist removeWatchlist;
+  final GetWatchListStatusTv getWatchListStatus;
+  final SaveWatchlistTv saveWatchlist;
+  final RemoveWatchlistTv removeWatchlist;
 
   TvDetailNotifier({
     required this.getTvDetail,

@@ -10,9 +10,9 @@ import 'package:ditonton/domain/entities/tv.dart' as _i10;
 import 'package:ditonton/domain/entities/tv_detail.dart' as _i7;
 import 'package:ditonton/domain/usecases/get_tv_detail.dart' as _i2;
 import 'package:ditonton/domain/usecases/get_tv_recommendations.dart' as _i3;
-import 'package:ditonton/domain/usecases/get_watchlist_status.dart' as _i4;
-import 'package:ditonton/domain/usecases/remove_watchlist.dart' as _i6;
-import 'package:ditonton/domain/usecases/save_watchlist.dart' as _i5;
+import 'package:ditonton/domain/usecases/get_watchlist_status_tv.dart' as _i4;
+import 'package:ditonton/domain/usecases/remove_watchlist_tv.dart' as _i6;
+import 'package:ditonton/domain/usecases/save_watchlist_tv.dart' as _i5;
 import 'package:ditonton/presentation/provider/tv_detail_notifier.dart'
     as _i8;
 import 'package:mockito/mockito.dart' as _i1;
@@ -29,11 +29,11 @@ class _FakeGetTvRecommendations extends _i1.Fake
     implements _i3.GetTvRecommendations {}
 
 class _FakeGetWatchListStatus extends _i1.Fake
-    implements _i4.GetWatchListStatus {}
+    implements _i4.GetWatchListStatusTv {}
 
-class _FakeSaveWatchlist extends _i1.Fake implements _i5.SaveWatchlist {}
+class _FakeSaveWatchlist extends _i1.Fake implements _i5.SaveWatchlistTv {}
 
-class _FakeRemoveWatchlist extends _i1.Fake implements _i6.RemoveWatchlist {}
+class _FakeRemoveWatchlist extends _i1.Fake implements _i6.RemoveWatchlistTv {}
 
 class _FakeTvDetail extends _i1.Fake implements _i7.TvDetail {}
 
@@ -56,17 +56,17 @@ class MockTvDetailNotifier extends _i1.Mock
               returnValue: _FakeGetTvRecommendations())
           as _i3.GetTvRecommendations);
   @override
-  _i4.GetWatchListStatus get getWatchListStatus =>
+  _i4.GetWatchListStatusTv get getWatchListStatus =>
       (super.noSuchMethod(Invocation.getter(#getWatchListStatus),
-          returnValue: _FakeGetWatchListStatus()) as _i4.GetWatchListStatus);
+          returnValue: _FakeGetWatchListStatus()) as _i4.GetWatchListStatusTv);
   @override
-  _i5.SaveWatchlist get saveWatchlist =>
+  _i5.SaveWatchlistTv get saveWatchlist =>
       (super.noSuchMethod(Invocation.getter(#saveWatchlist),
-          returnValue: _FakeSaveWatchlist()) as _i5.SaveWatchlist);
+          returnValue: _FakeSaveWatchlist()) as _i5.SaveWatchlistTv);
   @override
-  _i6.RemoveWatchlist get removeWatchlist =>
+  _i6.RemoveWatchlistTv get removeWatchlist =>
       (super.noSuchMethod(Invocation.getter(#removeWatchlist),
-          returnValue: _FakeRemoveWatchlist()) as _i6.RemoveWatchlist);
+          returnValue: _FakeRemoveWatchlist()) as _i6.RemoveWatchlistTv);
   @override
   _i7.TvDetail get tv => (super.noSuchMethod(Invocation.getter(#tv),
       returnValue: _FakeTvDetail()) as _i7.TvDetail);

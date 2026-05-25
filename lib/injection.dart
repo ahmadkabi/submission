@@ -9,9 +9,9 @@ import 'package:ditonton/domain/usecases/get_now_playing_tvs.dart';
 import 'package:ditonton/domain/usecases/get_popular_tvs.dart';
 import 'package:ditonton/domain/usecases/get_top_rated_tvs.dart';
 import 'package:ditonton/domain/usecases/get_watchlist_tvs.dart';
-import 'package:ditonton/domain/usecases/get_watchlist_status.dart';
-import 'package:ditonton/domain/usecases/remove_watchlist.dart';
-import 'package:ditonton/domain/usecases/save_watchlist.dart';
+import 'package:ditonton/domain/usecases/get_watchlist_status_tv.dart';
+import 'package:ditonton/domain/usecases/remove_watchlist_tv.dart';
+import 'package:ditonton/domain/usecases/save_watchlist_tv.dart';
 import 'package:ditonton/domain/usecases/search_tvs.dart';
 import 'package:ditonton/presentation/provider/now_playing_tvs_notifier.dart';
 import 'package:ditonton/presentation/provider/tv_detail_notifier.dart';
@@ -76,9 +76,9 @@ void init() {
   locator.registerLazySingleton(() => GetTvDetail(locator()));
   locator.registerLazySingleton(() => GetTvRecommendations(locator()));
   locator.registerLazySingleton(() => SearchTvs(locator()));
-  locator.registerLazySingleton(() => GetWatchListStatus(locator()));
-  locator.registerLazySingleton(() => SaveWatchlist(locator()));
-  locator.registerLazySingleton(() => RemoveWatchlist(locator()));
+  locator.registerLazySingleton(() => GetWatchListStatusTv(locator()));
+  locator.registerLazySingleton(() => SaveWatchlistTv(locator()));
+  locator.registerLazySingleton(() => RemoveWatchlistTv(locator()));
   locator.registerLazySingleton(() => GetWatchlistTvs(locator()));
 
   // repository
