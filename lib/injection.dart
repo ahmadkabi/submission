@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:ditonton/data/datasources/db/database_helper.dart';
 import 'package:ditonton/data/datasources/movie_local_data_source.dart';
 import 'package:ditonton/data/datasources/movie_remote_data_source.dart';
@@ -39,12 +41,15 @@ import 'package:ditonton/presentation/provider/tv_search_notifier.dart';
 import 'package:ditonton/presentation/provider/popular_tvs_notifier.dart';
 import 'package:ditonton/presentation/provider/top_rated_tvs_notifier.dart';
 import 'package:ditonton/presentation/provider/watchlist_tv_notifier.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:get_it/get_it.dart';
+import 'package:http/io_client.dart';
 
 final locator = GetIt.instance;
 
-void init() {
+Future<void> init() async {
+
   // provider
   locator.registerFactory(
     () => MovieListNotifier(
@@ -170,5 +175,32 @@ void init() {
   locator.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
 
   // external
-  locator.registerLazySingleton(() => http.Client());
+  // Load SSL certificate from assets
+  final certData = await rootBundle.load(
+    'certificates/certificates.pem',
+  );
+
+  // Create security context
+  final securityContext = SecurityContext(withTrustedRoots: false);
+
+  securityContext.setTrustedCertificatesBytes(
+    certData.buffer.asUint8List(),
+  );
+
+  // Create HttpClient with SSL pinning
+  final httpClient = HttpClient(
+    context: securityContext,
+  );
+
+  // Reject unknown certificates
+  httpClient.badCertificateCallback =
+      (X509Certificate cert, String host, int port) {
+    return false;
+  };
+
+  // Register pinned client
+  // locator.registerLazySingleton(() => http.Client());
+  locator.registerLazySingleton<http.Client>(
+    () => IOClient(httpClient),
+  );
 }
