@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "945670712135",
+    "project_id": "learning-20829",
+    "storage_bucket": "learning-20829.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945670712135:android:1454b9e5cfa204848a7a62",
+        "android_client_info": {
+          "package_name": "com.dicoding.ditonton"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCptBSNViHdBcofdOTsLICkrQrhtHJldVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
