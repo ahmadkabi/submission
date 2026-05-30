@@ -3,20 +3,20 @@ import 'package:dartz/dartz.dart';
 import 'package:ditonton/common/failure.dart';
 import 'package:ditonton/domain/entities/movie.dart';
 import 'package:ditonton/domain/usecases/search_movies.dart';
-import 'package:ditonton/presentation/bloc/search_bloc.dart';
+import 'package:ditonton/presentation/bloc/search/search_movie_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'search_bloc_test.mocks.dart';
+import 'search_movie_bloc_test.mocks.dart';
 
 @GenerateMocks([SearchMovies])
 void main() {
-  late SearchBloc searchBloc;
+  late SearchMovieBloc searchBloc;
   late MockSearchMovies mockSearchMovies;
 
   setUp(() {
     mockSearchMovies = MockSearchMovies();
-    searchBloc = SearchBloc(mockSearchMovies);
+    searchBloc = SearchMovieBloc(mockSearchMovies);
   });
 
   test('initial state should be empty', () {
@@ -43,7 +43,7 @@ void main() {
   final tMovieList = <Movie>[tMovieModel];
   final tQuery = 'spiderman';
 
-  blocTest<SearchBloc, SearchState>(
+  blocTest<SearchMovieBloc, SearchMovieState>(
     'Should emit [Loading, HasData] when data is gotten successfully',
     build: () {
       when(mockSearchMovies.execute(tQuery))
@@ -61,7 +61,7 @@ void main() {
     },
   );
 
-  blocTest<SearchBloc, SearchState>(
+  blocTest<SearchMovieBloc, SearchMovieState>(
     'Should emit [Loading, Error] when get search is unsuccessful',
     build: () {
       when(mockSearchMovies.execute(tQuery))
