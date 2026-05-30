@@ -1,6 +1,7 @@
 import 'package:ditonton/common/constants.dart';
 import 'package:ditonton/common/utils.dart';
 import 'package:ditonton/firebase_options.dart';
+import 'package:ditonton/presentation/bloc/detail/movie_detail_bloc.dart';
 import 'package:ditonton/presentation/bloc/search/search_movie_bloc.dart';
 import 'package:ditonton/presentation/bloc/search/search_tv_bloc.dart';
 import 'package:ditonton/presentation/pages/about_page.dart';
@@ -52,6 +53,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (_) => di.locator<SearchTvBloc>(),
+        ),
+        BlocProvider(
+          create: (_) => di.locator<MovieDetailBloc>(),
         ),
         ChangeNotifierProvider(
           create: (_) => di.locator<MovieListNotifier>(),
