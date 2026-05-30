@@ -29,6 +29,7 @@ import 'package:ditonton/domain/usecases/save_watchlist_movie.dart';
 import 'package:ditonton/domain/usecases/save_watchlist_tv.dart';
 import 'package:ditonton/domain/usecases/search_movies.dart';
 import 'package:ditonton/domain/usecases/search_tvs.dart';
+import 'package:ditonton/presentation/bloc/search_bloc.dart';
 import 'package:ditonton/presentation/provider/movie_detail_notifier.dart';
 import 'package:ditonton/presentation/provider/movie_list_notifier.dart';
 import 'package:ditonton/presentation/provider/movie_search_notifier.dart';
@@ -70,6 +71,11 @@ Future<void> init() async {
   locator.registerFactory(
     () => MovieSearchNotifier(
       searchMovies: locator(),
+    ),
+  );
+  locator.registerFactory(
+    () => SearchBloc(
+      locator(),
     ),
   );
   locator.registerFactory(
@@ -199,7 +205,6 @@ Future<void> init() async {
   };
 
   // Register pinned client
-  // locator.registerLazySingleton(() => http.Client());
   locator.registerLazySingleton<http.Client>(
     () => IOClient(httpClient),
   );

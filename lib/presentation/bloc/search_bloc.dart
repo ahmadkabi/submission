@@ -1,3 +1,4 @@
+import 'package:ditonton/common/utils.dart';
 import 'package:ditonton/domain/entities/movie.dart';
 import 'package:ditonton/domain/usecases/search_movies.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,6 +25,7 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
           emit(SearchHasData(data));
         },
       );
-    });
+    }, 
+    transformer: debounce(const Duration(milliseconds: 500)));
   }
 }
